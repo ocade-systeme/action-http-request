@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-const axios = require('axios');
 
 try {
   // Récupération des inputs
@@ -16,12 +15,8 @@ try {
     data: body
   };
 
-  // Envoi de la requête HTTP
-  axios(config).then(function (response) {
-    console.log(JSON.stringify(response.data));
-  }).catch(function (error) {
-    console.log(error);
-  });
+  /** Fetch */
+  fetch(url, config)
 
 } catch (error) {
   core.setFailed(error.message);
