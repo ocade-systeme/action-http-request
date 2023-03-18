@@ -1,0 +1,20 @@
+name: 'Envoi d'une requête HTTP'
+description: "Action permettant d'envoyer une requête HTTP"
+inputs:
+  type:  # type de la requête, GET, POST, PUT, DELETE..
+    description: 'Type de la requête, GET, POST, PUT, DELETE..'
+    required: false
+    default: 'GET'
+  url:  # url de la requête
+    description: 'Url de la requête'
+    required: true
+  headers:  # headers de la requête
+    description: 'Headers de la requête'
+    required: false
+  body:  # corps de la requête
+    description: 'Corps de la requête'
+    required: false
+
+runs:
+  using: 'node16'
+  main: 'index.js'
