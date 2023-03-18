@@ -15,8 +15,12 @@ try {
     data: body
   };
 
-  /** Fetch */
-  fetch(url, config)
+  // Envoi de la requête HTTP
+  axios(config).then(function (response) {
+    console.log(JSON.stringify(response.data));
+  }).catch(function (error) {
+    console.log(error);
+  });
 
 } catch (error) {
   core.setFailed(error.message);
