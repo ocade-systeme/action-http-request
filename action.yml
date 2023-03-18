@@ -1,4 +1,4 @@
-name: 'Envoi d'une requête HTTP'
+name: "Envoi d'une requête HTTP"
 description: "Action permettant d'envoyer une requête HTTP"
 inputs:
   type:  # type de la requête, GET, POST, PUT, DELETE..
