@@ -3,7 +3,7 @@ const axios = require('axios');
 
 try {
   // Récupération des inputs
-  const requestType = core.getInput('type', { required: false }) || 'GET';
+  const requestType = core.getInput('method', { required: false }) || 'GET';
   const url = core.getInput('url', { required: true });
   const headers = JSON.parse(core.getInput('headers', { required: false }) || '{}');
   const body = JSON.parse(core.getInput('body', { required: false }) || '{}');
