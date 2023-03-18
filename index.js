@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const axios = require('axios');
 
 try {
   // Récupération des inputs
